@@ -25,7 +25,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload = "allCaller()">
 
     <!-- navigatie bar -->
     <div class="navBar" id="navBar">
@@ -65,12 +65,31 @@
       <!-- user -->
       <div class="userViewer">
         <!-- naar profiel pagina -->
-        <a href = "">
+        <a href = "/profiel">
           <h10>Username</h10>
           <img alt="userImg" src="images/icon-user.png">
         </a>
       </div>
 
+    </div>
+
+    <!-- feed -->
+    <div class="imageWrapperFeed">
+      <div class="wrapperFeed">
+        <div class="wrapperFeedMidden">
+
+        </div>
+      </div>
+    </div>
+    <!-- ________________________ -->
+
+    <div class="imageWrapperTijd">
+      <div class="wrapperTijd">
+        <div class="wrapperTijdMidden">
+          <p id="tijd"></p>
+          <p id="datum"></p>
+        </div>
+      </div>
     </div>
 
     <script src="index.js"></script>

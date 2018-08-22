@@ -1,3 +1,8 @@
+// deze functies worden tegelijk gecalled onload
+function allCaller() {
+  time();
+}
+
 var dateSelector;
 var navMonth;
 var navYear;
@@ -9,7 +14,7 @@ var dateSelectorYear;
 
 var richting = "uit";
 
-// var monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //
 // function dateSelectorNavBar() {
 //   dateSelector = document.getElementById('dateSelectorInput');
@@ -130,28 +135,28 @@ function navBarPop() {
   }
 }
 
-  // tijd functie komt later
-//
-// var hour;
-//
-// function time() {
-//   // var date = date();
-//   var today = new Date();
-//   hour = today.getHours();
-//   var min = today.getMinutes();
-//   var dd = today.getDate();
-//   var mm = today.getMonth() + 1; //January is 0!
-//   var yyyy = today.getFullYear();
-//   var divTijd = document.getElementById('tijd');
-//   var divDatum = document.getElementById('datum');
-//   if (hour < 10 && min < 10) {
-//     divTijd.innerHTML = "0" + hour + " : " + "0" + min;
-//   } else if (hour < 10) {
-//     divTijd.innerHTML = "0" + hour + " : " + min;
-//   } else if (min < 10) {
-//     divTijd.innerHTML = hour + " : " + "0" + min;
-//   } else {
-//     divTijd.innerHTML = hour + " : " + min;
-//   }
-//   divDatum.innerHTML = dd + " " + monthsArray[mm - 1] + " " + yyyy;
-// }
+  // tijd functie
+
+var hour;
+
+function time() {
+  // var date = date();
+  var today = new Date();
+  hour = today.getHours();
+  var min = today.getMinutes();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  var divTijd = document.getElementById('tijd');
+  var divDatum = document.getElementById('datum');
+  if (hour < 10 && min < 10) {
+    divTijd.innerHTML = "0" + hour + " : " + "0" + min;
+  } else if (hour < 10) {
+    divTijd.innerHTML = "0" + hour + " : " + min;
+  } else if (min < 10) {
+    divTijd.innerHTML = hour + " : " + "0" + min;
+  } else {
+    divTijd.innerHTML = hour + " : " + min;
+  }
+  divDatum.innerHTML = dd + " " + monthsArray[mm - 1] + " " + yyyy;
+}
